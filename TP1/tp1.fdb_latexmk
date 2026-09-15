@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1789509478.6897 "c:/Users/juani/OneDrive/Escritorio/F4/F4-labos/TP1/tp1.tex" "tp1.pdf" "tp1" 1789509486.01816 0
+["pdflatex"] 1789515067.19964 "c:/Users/juani/OneDrive/Escritorio/F4/F4-labos/TP1/tp1.tex" "tp1.pdf" "tp1" 1789515071.08882 0
   "C:/Users/juani/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1789508601 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/juani/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx1440.pk" 1787609488 18748 9c533a3a9616a7fbec7559478bd268b7 ""
   "C:/Users/juani/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcbx2074.pk" 1787609490 28420 4ce2e69045e5a3ba3ca02b95e4560c41 ""
@@ -262,11 +262,11 @@
   "C:/Users/juani/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/juani/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "Logo_ITBA.png" 1789508438 33976 6517bbe68f7e38348cf75495eea1d088 ""
-  "c:/Users/juani/OneDrive/Escritorio/F4/F4-labos/TP1/tp1.tex" 1789509475 24338 0bfe7132e1b800dadc073c9c010e1527 ""
-  "tp1.aux" 1789509485 4271 460276aaa4b488e0e1a11463a8c186ee "pdflatex"
-  "tp1.out" 1789509485 3795 a587c4bebc8c6aefab58bf9563114bee "pdflatex"
-  "tp1.tex" 1789509475 24338 0bfe7132e1b800dadc073c9c010e1527 ""
-  "tp1.toc" 1789509485 1799 99e1163898e1e61c8c6f92dc38822104 "pdflatex"
+  "c:/Users/juani/OneDrive/Escritorio/F4/F4-labos/TP1/tp1.tex" 1789515061 23774 346d556844e6bd559ae1d4f169abe8b2 ""
+  "tp1.aux" 1789515070 4209 ab07938ff39caa7da8b9531d1a6aff87 "pdflatex"
+  "tp1.out" 1789515070 3795 a587c4bebc8c6aefab58bf9563114bee "pdflatex"
+  "tp1.tex" 1789515061 23774 346d556844e6bd559ae1d4f169abe8b2 ""
+  "tp1.toc" 1789515070 1799 99e1163898e1e61c8c6f92dc38822104 "pdflatex"
   (generated)
   "tp1.aux"
   "tp1.log"

@@ -35,8 +35,8 @@
 
 %%%%%%%%%%%%%%%%%%% VARIABLES %%%%%%%%%%%%%%%%%%%%
 \newcommand{\Facultad}{Instituto Tecnológico \\de\\ Buenos Aires}
-\newcommand{\TPn}{Trabajo Práctico N° 5}
-\newcommand{\TPtema}{Puentes de Medición}
+\newcommand{\TPn}{Trabajo Práctico N° 1}
+\newcommand{\TPtema}{Experimento de Millikan}
 \graphicspath{{imagenes/}}
 
 %%%%%%%%%%%%%%%%%% FORMATO TÍTULO Y NUMERACIÓN %%%%%%%%%%%%%%%%%%%
@@ -92,16 +92,15 @@
 
         {\huge\bfseries \TPn \par}
         \vspace{1.5cm}
-        {\Large Laboratorio de Electrónica\\ 25.13 \par}
+        {\Large Laboratorio de Física IV\\ 93.61 \par}
         \vspace{0.5cm}
         {\Large \TPtema \par}
         \vfill 
-        {\Large \bfseries Grupo N° 2 \par}
+        {\Large \bfseries Grupo N° 55 \par}
         \vspace{1cm}
-        {\large Juan Bautista Correa Uranga \hfill Legajo: 65016 \par} 
-        {\large Juan Ignacio Caorsi \hfill Legajo: 65532  \par}
+        {\large Juan Ignacio Fogolin Lagares \hfill Legajo: 66409  \par}
         {\large Rita Moschini \hfill Legajo: 67026 \par} 
-        {\large Lucas Solar Grillo \hfill Legajo: 63322\par}
+        {\large Agustín Alejandro Montoto \hfill Legajo: 65511\par}
         \vfill
         {\large \today\par}
         \vfill
@@ -160,7 +159,7 @@
 
 Se estudió el movimiento de gotas de aceite cargadas entre las placas paralelas de una celda de Millikan. Para cada una de doce observaciones se ajustó la diferencia de potencial hasta mantener una gota en reposo y se registró la tensión de equilibrio. Luego se anuló el campo eléctrico y se midió el tiempo empleado por la gota para atravesar seis divisiones del retículo. A partir de la velocidad límite se calculó el radio de cada gota mediante la ley de Stokes; con ese radio y la tensión de equilibrio se obtuvo su carga. Finalmente, la carga elemental se determinó buscando el mínimo de una función que mide cuánto se apartan las cargas observadas de múltiplos enteros de un mismo valor.
 
-\textbf{Resultado principal:} \pendiente{COMPLETAR CON $e_{\mathrm{exp}} \pm \Delta e$ Y EL ERROR RELATIVO UNA VEZ PROCESADOS LOS DATOS}
+\textbf{Resultado principal:} Se obtuvo experimentalmente un valor representativo de la carga elemental que resulta $e_{\mathrm{exp}} = (1,378 \pm 0,07) \times 10^{-19}$ C y que conlleva una incertidumbre relativa porcentual del 5,08$\%$.
 
 \section{Introducción teórica}
 
@@ -234,10 +233,10 @@ El montaje estuvo formado por los siguientes elementos. Los modelos y resolucion
     \endfoot
     Celda de Millikan & Contiene las placas paralelas, el orificio de ingreso y el sistema de iluminación. & $d=5$ mm según la guía \\
     Microscopio con retículo & Permite seleccionar una gota y medir su desplazamiento vertical. & 4,8 divisiones $=2,00$ mm \\
-    Fuente regulable de alta tensión & Genera la diferencia de potencial entre las placas. & 0 a 300 V aprox.; modelo: [COMPLETAR] \\
-    Tester o multímetro & Controla la tensión aplicada a la celda. & Resolución: [COMPLETAR] V \\
+    Fuente regulable de alta tensión & Genera la diferencia de potencial entre las placas. & 0 a 300 V aprox. \\
+    Tester o multímetro & Controla la tensión aplicada a la celda. & Resolución: $\pm$3 V \\
     Llave selectora & Conecta, desconecta o invierte la polaridad del campo. & Posiciones utilizadas: campo y neutro \\
-    Cronómetro & Mide el tiempo de caída sobre seis divisiones. & Resolución: [COMPLETAR] s \\
+    Cronómetro & Mide el tiempo de caída sobre seis divisiones. & Resolución: $\pm$0,01 s \\
     Atomizador con aceite & Produce gotas pequeñas, algunas cargadas por fricción. & Aceite de densidad típica 0,817 g/mL \\
 \end{longtable}
 
@@ -312,22 +311,22 @@ Si el retículo o la cantidad efectiva de divisiones utilizados fueron diferente
 \centering
 \small
 \caption{Datos primarios de las doce observaciones.}
-\begin{tabular}{@{}C{1.8cm}C{2.9cm}C{2.2cm}C{3.3cm}C{2.2cm}@{}}
+\begin{tabular}{@{}C{1.8cm}C{2.9cm}C{3.3cm}@{}}
     \toprule
-    \textbf{Medición} & \textbf{$V$ equilibrio (V)} & \textbf{$\Delta V$ (V)} & \textbf{$t$ para 6 div. (s)} & \textbf{$\Delta t$ (s)} \\
+    \textbf{Medición} & \textbf{$V$ equilibrio (V)} & \textbf{$t$ para 6 div. (s)} \\
     \midrule
-    1 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    2 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    3 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    4 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    5 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    6 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    7 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    8 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    9 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    10 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    11 & [\quad] & [\quad] & [\quad] & [\quad] \\
-    12 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    1  & 10  & 56,65 \\
+    2  & 109 & 69,13 \\
+    3  & 61  & 28 \\
+    4  & 5   & 114,75 \\
+    5  & 50  & 6,4 \\
+    6  & 79  & 28,7 \\
+    7  & 173 & 39,66 \\
+    8  & 53  & 10,6 \\
+    9  & 56  & 10,28 \\
+    10 & 38  & 6,9 \\
+    11 & 61  & 14,67 \\
+    12 & 49  & 3,67 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -337,7 +336,7 @@ Si el retículo o la cantidad efectiva de divisiones utilizados fueron diferente
 \begin{table}[H]
 \centering
 \small
-\caption{Constantes de cálculo. Reemplazar los valores típicos si se usaron valores medidos.}
+\caption{Constantes de cálculo.}
 \begin{tabular}{@{}L{3.8cm}C{1.7cm}L{3.7cm}L{4.0cm}@{}}
     \toprule
     \textbf{Magnitud} & \textbf{Símbolo} & \textbf{Valor utilizado} & \textbf{Observación} \\
@@ -364,22 +363,22 @@ q=\frac{4\pi d}{3V}\left(\frac{9\eta L}{2t}\right)^{3/2}\frac{1}{\sqrt{(\rho-\si
 \centering
 \small
 \caption{Resultados intermedios y carga calculada para cada observación.}
-\begin{tabular}{@{}C{1.2cm}C{2.5cm}C{2.3cm}C{2.6cm}C{2.6cm}C{1.3cm}@{}}
+\begin{tabular}{@{}C{1.2cm}C{2.5cm}C{2.3cm}C{2.6cm}C{2.6cm}@{}}
     \toprule
-    \textbf{Med.} & \textbf{$v_L$ (m/s)} & \textbf{$a$ (m)} & \textbf{$q$ (C)} & \textbf{$\Delta q$ (C)} & \textbf{$n_i$} \\
+    \textbf{Med.} & \textbf{$v_L$ (m/s)} & \textbf{$a$ (m)} & \textbf{$q$ (C)} & \textbf{$\Delta q$ (C)} \\
     \midrule
-    1 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    2 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    3 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    4 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    5 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    6 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    7 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    8 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    9 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    10 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    11 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
-    12 & [\quad] & [\quad] & [\quad] & [\quad] & [\quad] \\
+    1 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    2 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    3 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    4 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    5 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    6 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    7 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    8 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    9 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    10 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    11 & [\quad] & [\quad] & [\quad] & [\quad] \\
+    12 & [\quad] & [\quad] & [\quad] & [\quad] \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -489,7 +488,10 @@ La guía advierte que no debe eliminarse una medición únicamente porque no coi
 
 \section{Conclusiones}
 
-Mediante la combinación de la caída a velocidad terminal y el equilibrio electrostático se obtuvo la carga de cada gota sin medir directamente su masa ni su radio. El valor de la carga elemental deducido del conjunto fue \pendiente{$e_{\mathrm{exp}}\pm\Delta e$}. La diferencia relativa respecto del valor de referencia fue \pendiente{$\varepsilon_r$}. \pendiente{INDICAR SI EL RESULTADO FUE COMPATIBLE Y CUÁL FUE LA LIMITACIÓN EXPERIMENTAL DOMINANTE}
+Mediante la combinación de la caída a velocidad terminal y el equilibrio electrostático se 
+obtuvo la carga de cada gota sin medir directamente su masa ni su radio. El valor de la carga 
+elemental deducido del conjunto fue $e_{\mathrm{exp}} = (1,378 \pm 0,07) \times 10^{-19}$ C. 
+La diferencia relativa respecto del valor de referencia fue del 14$\%$. \pendiente{INDICAR SI EL RESULTADO FUE COMPATIBLE Y CUÁL FUE LA LIMITACIÓN EXPERIMENTAL DOMINANTE}
 
 \section{Referencias}
 
