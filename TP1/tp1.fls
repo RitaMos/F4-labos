@@ -488,11 +488,6 @@ INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcbx1440.tfm
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\juani\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT .\tp1.toc
-INPUT .\tp1.toc
-INPUT tp1.toc
-INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
@@ -507,6 +502,11 @@ INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\juani\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\tp1.toc
+INPUT .\tp1.toc
+INPUT tp1.toc
 OUTPUT tp1.toc
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\juani\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
