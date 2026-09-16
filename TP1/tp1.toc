@@ -18,5 +18,4 @@
 \contentsline {section}{\numberline {7}Determinación de la carga elemental}{6}{section.7}%
 \contentsline {section}{\numberline {8}Análisis de los resultados obtenidos}{7}{section.8}%
 \contentsline {section}{\numberline {9}Conclusiones}{7}{section.9}%
-\contentsline {section}{\numberline {10}Referencias}{7}{section.10}%
 \contentsfinish 
