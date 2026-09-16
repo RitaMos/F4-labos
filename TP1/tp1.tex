@@ -433,28 +433,72 @@ Durante la práctica se dificultó la visualización de las gotas debido a la il
  tamaño y la alta concentración de estas. Esto ocurrió a distintos niveles de gravedad dependiendo del 
 estudiante y afecta directamente la incertidumbre de las mediciones.
 
-\section{Determinación de la carga elemental}
+\section{Cálculo de errores}
+Para propagar los errores en las mediciones, se utilizó que para una variable dependiente $F(x,y,z)$ el cálculo de su incerteza se realiza mediante la ecuación
+\[
+\Delta F =
+\sqrt{
+\left(\frac{\partial F}{\partial x}\Delta x\right)^2
++
+\left(\frac{\partial F}{\partial y}\Delta y\right)^2
++
+\left(\frac{\partial F}{\partial z}\Delta z\right)^2
+}
+\]
 
-Para cada valor candidato $e$ se calcula el entero $n_i$ más próximo a $q_i/e$ y se evalúa la suma de los apartamientos cuadráticos
+Con el fin de calcular $\Delta q_i$, se notó que las variables de la que la misma dependía eran el radio de cada gota $a_i$ y la tensión necesaria para frenarla, $V_i$, y que a su vez el radio dependía de la velocidad terminal, que dependía de la medición de la distancia y del tiempo. Así, los cálculos de las incertezas resultan ser:
+\[
+\Delta q_i =
+\sqrt{
+\left(\frac{\partial q}{\partial a}(a_i,V_i)\cdot \Delta a_i\right)^2
++
+\left(\frac{\partial q}{\partial V}(a_i,V_i )\cdot\Delta V\right)^2
+}
+\]
+\[
+\Delta a_i = \sqrt{\left(\frac{\partial a}{\partial v_L}(v_{Li})\cdot\Delta v_{Li}\right)^2 }
+\]
+\[
+\Delta v_{Li} = \sqrt{\left(\frac{\partial v_L}{\partial x}(x,t_i)\cdot\Delta x\right)^2
++
+\left(\frac{\partial v_L}{\partial t}(x,t_i)\cdot\Delta t\right)^2}
+\]
+Nótese que las incertezas de la tensión, la distancia x y el tiempo x, así como la distancia recorrida x son iguales para todas las gotas, por lo que no tienen subíndice.
 
+A su vez, las derivadas parciales quedan:
+\begin{equation*}
+    \frac{\partial v_L}{\partial t} = -\frac{x}{t^2}
+\end{equation*}
+\begin{equation*}
+    \frac{\partial a}{\partial v_L} = -\frac{1}{2\sqrt{\frac{9}{2}\frac{\eta \, v_L}{(\rho-\sigma)g}}} \cdot\frac{9}{2} \frac{\eta}{((\rho-\sigma)g} 
+\end{equation*}
+\begin{equation*}
+    \frac{\partial q}{\partial V} = 3a^2\cdot \frac{4\pi (\rho-\sigma)gx}{3V}=\frac{3q}{a}
+\end{equation*}
+
+Las incertidumbres obtenidas directamente de la experiencia son
+\begin{itemize}
+    \item $\Delta x\approx 0$: la distancia x que la gota recorre en un tiempo t se calcula multiplicando la cantidad de retículos por la longitud de cada retículo, ambos valores que se toman como parámetros sin incertidumbre.
+    \item $\Delta t = \pm 0,4\,s$: considera tanto el tiempo de reacción de la persona que realizó la medición como el error del cronómetro.
+    \item $\Delta V=\pm 3 \, V$: considera el error del multímetro al medir la diferencia de potencial entre las placas del capacitor.
+\end{itemize}
+
+\section{Cálculo de la carga fundamental}
+
+Luego de obtener las cargas de las distintas gotas, para el valor de cada una se obtuvo una función $f(e)$. Esta función mide qué tan compatibles son las cargas que se midieron con la hipótesis de que cada carga es un múltiplo entero de una carga fundamental. Para un rango de valores desde $1 \times 10^{-19}$ C hasta $1{,}7 \times 10^{-19}$ C, dividiendo el intervalo en 25 valores, se definió una función $f(e)$, de manera que el valor de $e$ que la minimizara sea el que mejor coincide con la hipótesis de que todas las cargas experimentales son múltiplos enteros de la carga del electrón. Así, dicha función es:
+\[
+f(e)=\sum_i\left(\frac{q_i}{e}-q_i^*\right)^2
+\]
+donde $q_i^*=\left[\frac{q_i}{e}+0,5\right] $.
+
+Con el fin de considerar las incertidumbres experimentales, se obtuvieron los valores de $f(e+\Delta e)$ y $f(e-\Delta e)$ como se puede ver en las ecuaciones \ref{f(e)ConError} para cada valor de e preestablecido. Así, se definió $e_+$ como el valor que minimiza $f(e+\Delta e)$ y $e_-$ como el valor que minimiza $f(e-\Delta e)$, y se estableció que la semisuma de ambos es el valor representativo de e, y la semiresta el valor absoluto de su medición. Las funciones $f(e+\Delta e)$ y $f(e-\Delta e)$ son:
 \begin{equation}
-f(e)=\sum_i\left(\frac{q_i}{e}-n_i\right)^2,\qquad n_i=\operatorname{round}\!\left(\frac{q_i}{e}\right)
-\end{equation}
+    f(e+\Delta e)=\sum_i\left(\frac{q_i+\Delta q_i}{e}-q_i^*\right)^2 
+    \qquad \qquad
+    f(e-\Delta e)=\sum_i\left(\frac{q_i-\Delta q_i}{e}-q_i^*\right)^2    
+\end{equation} \label{f(e)ConError}
+(Los valores de $q_i^*$ también se volvieron a calcular reemplazando $q$ por $q_i \pm \Delta q_i$ según correspondía).
 
-Se recorre un intervalo de valores candidatos, por ejemplo desde $1,0\times10^{-19}$ C hasta $1,7\times10^{-19}$ C con incrementos de $0,001\times10^{-19}$ C, o el intervalo que confirme el docente. El mínimo de $f(e)$ proporciona la estimación experimental inicial. La función debe graficarse con $e$ en el eje horizontal y $f(e)$ en el eje vertical.
-
-\begin{figure}[H]
-    \centering
-    \pendiente{INSERTAR GRÁFICO DE $f(e)$ CON EL MÍNIMO IDENTIFICADO}
-    \caption{Función de ajuste empleada para determinar la carga elemental.}
-\end{figure}
-
-Para estimar el efecto de las incertidumbres se repite la minimización usando los extremos $q_i+\Delta q_i$ y $q_i-\Delta q_i$.
-
-\begin{equation}
-f_{+}(e)=\sum_i\left(\frac{q_i+\Delta q_i}{e}-n_i\right)^2,\qquad
-f_{-}(e)=\sum_i\left(\frac{q_i-\Delta q_i}{e}-n_i\right)^2
-\end{equation}
 
 Si $e_+$ y $e_-$ son las posiciones de los dos mínimos, el resultado representativo y su error absoluto se expresan como
 
@@ -479,11 +523,12 @@ e_{\mathrm{exp}}=\frac{e_++e_-}{2},\qquad
 \end{tabularx}
 \end{table}
 
-La comparación con el valor de referencia se realiza solamente después de obtener $e_{\mathrm{exp}}$.
+Una vez obtenido $e_{\mathrm{exp}}$ se puede realizar la comparación con el valor de referencia y calcular la diferencia relativa porcentual, definida como
 
 \begin{equation}
 \varepsilon_r=\frac{\left|e_{\mathrm{exp}}-e_{\mathrm{ref}}\right|}{e_{\mathrm{ref}}}\times100\%
 \end{equation}
+
 
 \section{Análisis de los resultados obtenidos}
 

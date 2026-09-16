@@ -15,7 +15,8 @@
 \contentsline {section}{\numberline {6}Discusión y cálculo de errores}{5}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Incertidumbres de las magnitudes medidas}{5}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Fuentes de error y dispersión}{5}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Determinación de la carga elemental}{6}{section.7}%
-\contentsline {section}{\numberline {8}Análisis de los resultados obtenidos}{6}{section.8}%
-\contentsline {section}{\numberline {9}Conclusiones}{7}{section.9}%
+\contentsline {section}{\numberline {7}Cálculo de errores}{6}{section.7}%
+\contentsline {section}{\numberline {8}Cálculo de la carga fundamental}{6}{section.8}%
+\contentsline {section}{\numberline {9}Análisis de los resultados obtenidos}{7}{section.9}%
+\contentsline {section}{\numberline {10}Conclusiones}{7}{section.10}%
 \contentsfinish 
