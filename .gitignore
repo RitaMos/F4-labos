@@ -1,0 +1,9 @@
+/TP2/tp2.pdf
+*.toc
+*.synctex.gz
+*.out
+*.aux
+*.fls
+*.pdf_latexmk
+*.log
+*.fdb_latexmk
