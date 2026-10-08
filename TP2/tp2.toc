@@ -1,2 +1,4 @@
 \babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción Teórica}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Campo magnético de las bobinas de Helmholtz}{2}{subsection.1.1}%
 \contentsfinish 
