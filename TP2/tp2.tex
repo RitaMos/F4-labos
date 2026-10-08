@@ -1,0 +1,161 @@
+\documentclass{article}
+
+%%%%%%%%%%%%%%% LIBRERIAS %%%%%%%%%%%%%%%%%%%%%
+\usepackage[thinc]{esdiff}
+\usepackage{amsmath,amssymb}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{graphicx}
+\IfFileExists{spanish.ldf}
+  {\usepackage[spanish,es-tabla]{babel}}
+  {\usepackage[provide=*,spanish]{babel}}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage{circuitikz}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm, footskip=1cm]{geometry}
+\usepackage{subfiles}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{grffile}
+\usepackage{comment}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{groupplots}
+
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usetikzlibrary{babel,arrows.meta,calc,positioning}
+
+%%%%%%%%%%%%%%%%%%% VARIABLES %%%%%%%%%%%%%%%%%%%%
+\newcommand{\Facultad}{Instituto Tecnológico \\de\\ Buenos Aires}
+\newcommand{\TPn}{Trabajo Práctico N° 2}
+\newcommand{\TPtema}{Determinación de la carga específica del electrón}
+\graphicspath{{imagenes/}}
+
+%%%%%%%%%%%%%%%%%% FORMATO TÍTULO Y NUMERACIÓN %%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+\renewcommand{\thesubsubsection}{$\alph{subsubsection}$}
+\setcounter{secnumdepth}{3}
+
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\large\bfseries}{\thesubsubsection}{0.5em}{}
+
+%%%%%%%%%%%%%%% SOPORTE DEL CUERPO DEL INFORME %%%%%%%%%%%%%%%%%%%%%
+\definecolor{azulencabezado}{HTML}{163A5F}
+\definecolor{azulclaro}{HTML}{EAF2F8}
+\definecolor{grislinea}{HTML}{D9D9D9}
+\definecolor{grispendiente}{HTML}{5C5C5C}
+
+\newcommand{\pendiente}[1]{\textcolor{grispendiente}{\textit{[#1]}}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\hypersetup{
+  hidelinks,
+  pdftitle={Informe del experimento de Determinación de la carga específica del electrón},
+  pdfsubject={Laboratorio de Física IV},
+  pdfkeywords={Carga especifica, laboratorio, Física IV}
+}
+
+\makeatletter
+\providecommand{\ttl@finishall}{}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%% ARCHIVO %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\hypersetup{pageanchor=false}
+
+%%%CARATULA%%%
+\begin{titlepage} %creo portada
+
+        \begin{flushleft}
+            \centering
+            \includegraphics[width=0.3\textwidth]{Logo_ITBA.png}
+        \end{flushleft}
+
+        \centering
+            
+        {\scshape\LARGE \Facultad \par} 
+        \vspace{1cm} 
+
+
+        {\huge\bfseries \TPn \par}
+        \vspace{1.5cm}
+        {\Large Laboratorio de Física IV\\ 93.61 \par}
+        \vspace{0.5cm}
+        {\Large \TPtema \par}
+        \vfill 
+        {\Large \bfseries Grupo N° 55 \par}
+        \vspace{1cm}
+        {\large Juan Ignacio Fogolin Lagares \hfill Legajo: 66409  \par}
+        {\large Rita Moschini \hfill Legajo: 67026 \par} 
+        {\large Agustín Alejandro Montoto \hfill Legajo: 65511\par}
+        \vfill
+        {\large Fecha de entrega: \today\par}
+        \vfill
+
+        \begin{flushleft}
+        \renewcommand{\arraystretch}{2.2}
+        \begin{tabularx}{\textwidth}{@{}L{8.5cm}Y@{}}
+            \toprule
+            \textbf{Fecha de aprobación:} & \\
+            \midrule
+            \textbf{Comentarios y observaciones del docente:} & \\
+             & \\
+             & \\
+            \bottomrule
+        \end{tabularx}
+        \end{flushleft}
+
+\end{titlepage}
+
+\pagenumbering{gobble}
+\tableofcontents 
+\newpage
+
+%%%%%%%%%%%%%%%%%%% CUERPO DEL INFORME %%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+
+\setstretch{1.12}
+\setlength{\parindent}{0.7cm}
+\setlength{\parskip}{0.25em}
+\setlength{\arrayrulewidth}{0.45pt}
+\setlength{\tabcolsep}{5pt}
+\arrayrulecolor{black}
+\renewcommand{\arraystretch}{1.28}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\setcounter{secnumdepth}{2}
+
+\titleformat{\section}{\Large\bfseries\color{black}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries\color{black}}{\thesubsection}{0.55em}{}
+\titlespacing*{\section}{0pt}{1.1em}{0.45em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.35em}
+
+\captionsetup{font={small,it},labelfont=it,justification=centering}
+\setlist[itemize]{leftmargin=1.05cm,itemsep=0.18em,topsep=0.25em}
+\setlist[enumerate]{leftmargin=1.05cm,itemsep=0.22em,topsep=0.25em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape Laboratorio de Física IV}
+\fancyhead[R]{\small\itshape Instituto Tecnológico de Buenos Aires}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\end{document}
