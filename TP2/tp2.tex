@@ -280,4 +280,165 @@ En el montaje experimental utilizado, el número de vueltas es n=124 y el radio 
 
 Esta última expresión relaciona directamente la carga específica del electrón con las magnitudes que pueden determinarse durante el experimento: la tensión de aceleración \(U_A\), el radio \(r\) de la trayectoria, la corriente \(i\) que circula por las bobinas y los parámetros geométricos del sistema de Helmholtz.
 
+\vspace*{25pt}
+
+\section{Instrumentos y elementos empleados}
+Para realizar la experiencia se utilizó un conjunto de \textbf{bobinas de Helmholtz} con un tubo de haz filiforme ubicado en su región central, una \textbf{fuente de tensión} y una \textbf{fuente de corriente}. La primera permitió establecer las tensiones del cañón de electrones, en particular la tensión de aceleración $U_A$; la segunda suministró la corriente $i$ a las bobinas, con la que se controló el campo magnético que curva la trayectoria.
+
+El tubo contiene un gas a baja presión que permite observar la trayectoria por emisión de luz cuando el haz de electrones interactúa con sus átomos. La escala del equipo permite determinar el diámetro de la circunferencia.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex, line width=.7pt]
+  \node[draw,rounded corners=2pt,minimum width=2.9cm,minimum height=1.35cm,align=center] (v) at (0,0) {Fuente de\\ tensión};
+  \node[draw,rounded corners=2pt,minimum width=4.7cm,minimum height=1.35cm,align=center] (sys) at (5.7,0) {Tubo de haz filiforme\\ dentro de las bobinas de Helmholtz};
+  \node[draw,rounded corners=2pt,minimum width=2.9cm,minimum height=1.35cm,align=center] (i) at (11.5,0) {Fuente de\\ corriente};
+  \draw[->] (v.east) -- node[above]{$U_A$} (sys.west);
+  \draw[->] (i.west) -- node[above]{$i$} (sys.east);
+  \node[align=center,font=\footnotesize] at (5.7,-1.15) {Lectura de la órbita: $d=2r$};
+\end{tikzpicture}
+\caption{Esquema funcional del montaje.}
+\end{figure}
+
+\section{Procedimiento experimental}
+Siguiendo el procedimiento, se alimentó el tubo para producir y colimar el haz de electrones. Posteriormente se aplicó la tensión de aceleración $U_A$ y se reguló la corriente de las bobinas para que la trayectoria coincidiera con las marcas de diámetro del equipo.
+
+Todas las corrientes registradas permanecieron por debajo del límite de $5\ \mathrm{A}$ en las bobinas.
+
+\section{Datos obtenidos, discusión y cálculo de errores}
+\subsection{Mediciones experimentales}
+La Tabla~\ref{tab:mediciones} muestra los valores de corriente de la planilla de medición para cada tensión y diámetro. \textbf{Se utilizan en los cálculos los radios $r=d/2$}, no los diámetros de la escala.
+
+\begin{table}[H]
+\centering\small
+\renewcommand{\arraystretch}{1.03}
+\caption{Corriente medida para cada tensión de aceleración y diámetro de órbita.}\label{tab:mediciones}
+\begin{tabular}{r r r r r r}
+\toprule
+Medición & $U_A$ (V) & $i$ (A), $d=0{,}04$ m & $i$ (A), $d=0{,}06$ m & $i$ (A), $d=0{,}08$ m & $i$ (A), $d=0{,}10$ m\\
+\midrule
+1 & 200 & 2,87 & 1,71 & 1,31 & 1,11\\
+2 & 210 & 3,00 & 1,84 & 1,39 & 1,18\\
+3 & 220 & 3,03 & 1,90 & 1,48 & 1,20\\
+4 & 230 & 3,21 & 2,02 & 1,53 & 1,27\\
+5 & 240 & 3,31 & 1,98 & 1,59 & 1,29\\
+6 & 250 & 3,38 & 2,10 & 1,63 & 1,33\\
+7 & 260 & 3,47 & 2,21 & 1,69 & 1,36\\
+8 & 270 & 3,57 & 2,32 & 1,73 & 1,41\\
+9 & 280 & 3,67 & 2,36 & 1,78 & 1,46\\
+10 & 290 & 3,80 & 2,41 & 1,83 & 1,49\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Para calcular la carga específica se definió, como indica la consigna,
+\begin{equation}
+A=\left[\left(\frac45\right)^{3/2}\frac{\mu_0n}{R}\right]^2=5{,}52523229\times10^{-7}\ \left(\frac{\mathrm T}{\mathrm A}\right)^2,
+\label{eq:A}
+\end{equation}
+con $\mu_0=4\pi\times10^{-7}\ \mathrm{T\,m/A}$. Por lo tanto, la ecuación (6) se escribe como
+\begin{equation}
+\frac em=\frac{2U_A}{A\,(ir)^2}.
+\label{eq:e_m_calc}
+\end{equation}
+Se tomó como valor de referencia el provisto en la planilla: $(e/m)_{\mathrm{ref}}=1{,}758820024\times10^{11}\ \mathrm{C/kg}$.
+
+\subsection{Método 1: cálculo para cada medición}
+Como ejemplo, para $U_A=200\ \mathrm{V}$, $d=0{,}04\ \mathrm{m}$ e $i=2{,}87\ \mathrm{A}$, resulta
+\begin{equation}
+\frac em=\frac{2(200)}{(5{,}52523229\times10^{-7})\,(2{,}87\cdot0{,}020)^2}
+=2{,}1973\times10^{11}\ \mathrm{C/kg}.
+\end{equation}
+Se repitió el cálculo para los 40 pares de datos y se obtuvieron los valores de la Tabla~\ref{tab:em}.
+
+\begin{table}[H]
+\centering\small
+\caption{Relación $e/m$ calculada para cada medición; valores expresados en $10^{11}\ \mathrm{C/kg}$.}\label{tab:em}
+\begin{tabular}{r r r r r r}
+\toprule
+$U_A$ (V) & $d=0{,}04$ m & $d=0{,}06$ m & $d=0{,}08$ m & $d=0{,}10$ m\\
+\midrule
+200 & 2,197 & 2,751 & 2,637 & 2,350\\
+210 & 2,112 & 2,495 & 2,459 & 2,184\\
+220 & 2,168 & 2,451 & 2,272 & 2,212\\
+230 & 2,020 & 2,267 & 2,223 & 2,065\\
+240 & 1,982 & 2,462 & 2,148 & 2,088\\
+250 & 1,980 & 2,280 & 2,129 & 2,046\\
+260 & 1,954 & 2,141 & 2,059 & 2,035\\
+270 & 1,917 & 2,018 & 2,041 & 1,966\\
+280 & 1,881 & 2,022 & 1,999 & 1,902\\
+290 & 1,817 & 2,008 & 1,959 & 1,891\\
+\midrule
+Promedio & 2,003 & 2,289 & 2,193 & 2,074\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+El promedio de las 40 determinaciones es
+\begin{equation}
+\overline{(e/m)}=\frac{1}{40}\sum_{k=1}^{40}\left(\frac em\right)_k
+=\boxed{2{,}1398\times10^{11}\ \mathrm{C/kg}}.
+\end{equation}
+Para el error relativo respecto del valor de tabla se utilizó
+\begin{equation}
+\varepsilon_{\mathrm{rel}}=\frac{\bigl|\overline{(e/m)}-(e/m)_{\mathrm{ref}}\bigr|}{(e/m)_{\mathrm{ref}}}\,100\%
+=\boxed{21{,}66\%}.
+\end{equation}
+El promedio de los errores relativos absolutos de los 40 valores individuales también resulta $21{,}66\%$; en este conjunto particular todos los valores individuales son mayores que el de referencia. Como medida de dispersión, el desvío estándar muestral de las 40 determinaciones es $s=0{,}2134\times10^{11}\ \mathrm{C/kg}$.
+
+\subsection{Método 2: ajuste lineal de los datos}
+La ecuación~\eqref{eq:e_m_calc} se reordena de la forma pedida en la consigna:
+\begin{equation}
+\underbrace{\frac{2U_A}{A}}_{y} = \underbrace{\frac em}_{\text{pendiente}}\,\underbrace{(ir)^2}_{x}.
+\label{eq:lineal}
+\end{equation}
+Para cada diámetro fijo se graficó $y=2U_A/A$ en función de $x=(ir)^2$ y se obtuvo una recta de tendencia por mínimos cuadrados de la forma $y=mx+b$ (intercepto libre). El parámetro $m$ tiene unidades de $\mathrm{C/kg}$ y constituye una segunda estimación experimental de $e/m$. Las cuatro rectas, los datos medidos y la recta correspondiente al valor de referencia se muestran en la Figura~\ref{fig:ajustes}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.96\textwidth]{ajustes_helmholtz.png}
+\caption{Ajustes lineales independientes para los cuatro diámetros de órbita. Las rectas discontinuas representan la relación teórica $y=(e/m)_{\mathrm{ref}}x$, con ordenada al origen nula.}
+\label{fig:ajustes}
+\end{figure}
+
+\begin{table}[H]
+\centering\small
+\caption{Parámetros de los ajustes de $2U_A/A$ frente a $(ir)^2$ y errores de sus pendientes respecto del valor de referencia.}\label{tab:regresion}
+\begin{tabular}{r r r r r}
+\toprule
+$d$ (m) & Pendiente $m$ ($10^{11}$ C/kg) & Ordenada $b$ ($10^8$, S.I.) & $R^2$ & Error relativo\\
+\midrule
+0,04 & 1,3402 & 2,8754 & 0,9928 & 23,80\%\\
+0,06 & 1,2233 & 4,0269 & 0,9771 & 30,45\%\\
+0,08 & 1,2793 & 3,6014 & 0,9951 & 27,26\%\\
+0,10 & 1,3458 & 3,0480 & 0,9927 & 23,48\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+El promedio de las cuatro pendientes es $\overline{m}=1{,}2971\times10^{11}\ \mathrm{C/kg}$, con un error relativo del $26{,}25\%$ respecto del valor de tabla. La diferencia entre $\overline{m}$ y el promedio obtenido en el Método 1 se explica porque el primero surge de la \emph{variación} de $y$ con $x$ al ajustar una recta con intercepto libre, mientras que el segundo promedia los cocientes $y/x$. Aunque los $R^2$ son altos, los interceptos positivos indican que las rectas ajustadas no pasan por el origen como predice el modelo ideal.
+
+\section{Análisis de los resultados obtenidos}
+\subsection{Comparación entre métodos}
+Ambos tratamientos utilizan las mismas cuarenta mediciones. No obstante, producen estimaciones diferentes, como se resume en la Tabla~\ref{tab:comparacion}.
+\begin{table}[H]
+\centering\small
+\caption{Comparación con el valor de referencia $(e/m)_{\mathrm{ref}}=1{,}7588\times10^{11}\ \mathrm{C/kg}$.}\label{tab:comparacion}
+\begin{tabular}{l r r}
+\toprule
+Procedimiento & $e/m$ obtenido ($10^{11}$ C/kg) & Error relativo\\
+\midrule
+Promedio de los 40 cocientes $y/x$ & 2,1398 & 21,66\%\\
+Promedio de cuatro pendientes libres & 1,2971 & 26,25\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Para los cuatro diámetros, las determinaciones de $e/m$ calculadas en forma individual disminuyen en general al aumentar $U_A$. Por ejemplo, para $d=0{,}04\ \mathrm{m}$, pasan de $2{,}197\times10^{11}$ a $1{,}817\times10^{11}\ \mathrm{C/kg}$ entre $200$ y $290\ \mathrm V$. Esta tendencia sistemática contribuye a que la pendiente de un ajuste con intercepto libre sea menor que el promedio de los cocientes $y/x$; por lo tanto, la dispersión no puede atribuirse únicamente a fluctuaciones aleatorias.
+
+\subsection{Conclusión}
+A partir de un haz de electrones desviado por el campo magnético de bobinas de Helmholtz fue posible obtener estimaciones experimentales de la relación carga-masa. El cálculo directo dio $(e/m)=2{,}1398\times10^{11}\ \mathrm{C/kg}$, con un error relativo del $21{,}66\%$. En cambio, las pendientes de los ajustes lineales con intercepto libre arrojaron un promedio de $1{,}2971\times10^{11}\ \mathrm{C/kg}$ y un error del $26{,}25\%$. Las discrepancias entre ambos métodos y la presencia de ordenadas al origen positivas muestran que el experimento no siguió exactamente el modelo ideal; un control más preciso del radio y un análisis de incertidumbres serían pasos importantes para mejorar el resultado.
+
+
+
 \end{document}
