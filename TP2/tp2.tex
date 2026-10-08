@@ -311,9 +311,11 @@ La Tabla~\ref{tab:mediciones} muestra los valores de corriente de la planilla de
 
 \begin{table}[H]
 \centering\small
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
 \renewcommand{\arraystretch}{1.03}
 \caption{Corriente medida para cada tensión de aceleración y diámetro de órbita.}\label{tab:mediciones}
-\begin{tabular}{r r r r r r}
+\begin{tabular}{|c|c|c|c|c|c|} %chktex 44
 \toprule
 Medición & $U_A$ (V) & $i$ (A), $d=0{,}04$ m & $i$ (A), $d=0{,}06$ m & $i$ (A), $d=0{,}08$ m & $i$ (A), $d=0{,}10$ m\\
 \midrule
@@ -333,28 +335,30 @@ Medición & $U_A$ (V) & $i$ (A), $d=0{,}04$ m & $i$ (A), $d=0{,}06$ m & $i$ (A),
 
 Para calcular la carga específica se definió, como indica la consigna,
 \begin{equation}
-A=\left[\left(\frac45\right)^{3/2}\frac{\mu_0n}{R}\right]^2=5{,}52523229\times10^{-7}\ \left(\frac{\mathrm T}{\mathrm A}\right)^2,
+A={\left[{\left(\frac45\right)}^{3/2}\frac{\mu_0n}{R}\right]}^2=5{,}52523229\times10^{-7}\ {\left(\frac{\mathrm T}{\mathrm A}\right)}^2,
 \label{eq:A}
 \end{equation}
 con $\mu_0=4\pi\times10^{-7}\ \mathrm{T\,m/A}$. Por lo tanto, la ecuación (6) se escribe como
 \begin{equation}
-\frac em=\frac{2U_A}{A\,(ir)^2}.
+\frac em=\frac{2U_A}{A\,{(ir)}^2}.
 \label{eq:e_m_calc}
 \end{equation}
-Se tomó como valor de referencia el provisto en la planilla: $(e/m)_{\mathrm{ref}}=1{,}758820024\times10^{11}\ \mathrm{C/kg}$.
+Se tomó como valor de referencia el provisto en la planilla: ${(e/m)}_{\mathrm{ref}}=1{,}758820024\times10^{11}\ \mathrm{C/kg}$.
 
 \subsection{Método 1: cálculo para cada medición}
 Como ejemplo, para $U_A=200\ \mathrm{V}$, $d=0{,}04\ \mathrm{m}$ e $i=2{,}87\ \mathrm{A}$, resulta
 \begin{equation}
-\frac em=\frac{2(200)}{(5{,}52523229\times10^{-7})\,(2{,}87\cdot0{,}020)^2}
+\frac em=\frac{2(200)}{(5{,}52523229\times10^{-7})\,{(2{,}87\cdot0{,}020)}^2}
 =2{,}1973\times10^{11}\ \mathrm{C/kg}.
 \end{equation}
 Se repitió el cálculo para los 40 pares de datos y se obtuvieron los valores de la Tabla~\ref{tab:em}.
 
 \begin{table}[H]
 \centering\small
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
 \caption{Relación $e/m$ calculada para cada medición; valores expresados en $10^{11}\ \mathrm{C/kg}$.}\label{tab:em}
-\begin{tabular}{r r r r r r}
+\begin{tabular}{|c|c|c|c|c|c|} %chktex 44
 \toprule
 $U_A$ (V) & $d=0{,}04$ m & $d=0{,}06$ m & $d=0{,}08$ m & $d=0{,}10$ m\\
 \midrule
@@ -376,12 +380,12 @@ Promedio & 2,003 & 2,289 & 2,193 & 2,074\\
 
 El promedio de las 40 determinaciones es
 \begin{equation}
-\overline{(e/m)}=\frac{1}{40}\sum_{k=1}^{40}\left(\frac em\right)_k
+\overline{(e/m)}=\frac{1}{40}\sum_{k=1}^{40}{\left(\frac em\right)}_k
 =\boxed{2{,}1398\times10^{11}\ \mathrm{C/kg}}.
 \end{equation}
 Para el error relativo respecto del valor de tabla se utilizó
 \begin{equation}
-\varepsilon_{\mathrm{rel}}=\frac{\bigl|\overline{(e/m)}-(e/m)_{\mathrm{ref}}\bigr|}{(e/m)_{\mathrm{ref}}}\,100\%
+\varepsilon_{\mathrm{rel}}=\frac{\bigl|\overline{(e/m)}-{(e/m)}_{\mathrm{ref}}\bigr|}{{(e/m)}_{\mathrm{ref}}}\,100\%
 =\boxed{21{,}66\%}.
 \end{equation}
 El promedio de los errores relativos absolutos de los 40 valores individuales también resulta $21{,}66\%$; en este conjunto particular todos los valores individuales son mayores que el de referencia. Como medida de dispersión, el desvío estándar muestral de las 40 determinaciones es $s=0{,}2134\times10^{11}\ \mathrm{C/kg}$.
@@ -389,22 +393,23 @@ El promedio de los errores relativos absolutos de los 40 valores individuales ta
 \subsection{Método 2: ajuste lineal de los datos}
 La ecuación~\eqref{eq:e_m_calc} se reordena de la forma pedida en la consigna:
 \begin{equation}
-\underbrace{\frac{2U_A}{A}}_{y} = \underbrace{\frac em}_{\text{pendiente}}\,\underbrace{(ir)^2}_{x}.
+\underbrace{\frac{2U_A}{A}}_{y} = \underbrace{\frac em}_{\text{pendiente}}\,\underbrace{{(ir)}^2}_{x}.
 \label{eq:lineal}
 \end{equation}
-Para cada diámetro fijo se graficó $y=2U_A/A$ en función de $x=(ir)^2$ y se obtuvo una recta de tendencia por mínimos cuadrados de la forma $y=mx+b$ (intercepto libre). El parámetro $m$ tiene unidades de $\mathrm{C/kg}$ y constituye una segunda estimación experimental de $e/m$. Las cuatro rectas, los datos medidos y la recta correspondiente al valor de referencia se muestran en la Figura~\ref{fig:ajustes}.
+Para cada diámetro fijo se graficó $y=2U_A/A$ en función de $x={(ir)}^2$ y se obtuvo una recta de tendencia por mínimos cuadrados de la forma $y=mx+b$ (intercepto libre). El parámetro $m$ tiene unidades de $\mathrm{C/kg}$ y constituye una segunda estimación experimental de $e/m$. Las cuatro rectas, los datos medidos y la recta correspondiente al valor de referencia se muestran en la Figura~\ref{fig:ajustes}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=.96\textwidth]{ajustes_helmholtz.png}
-\caption{Ajustes lineales independientes para los cuatro diámetros de órbita. Las rectas discontinuas representan la relación teórica $y=(e/m)_{\mathrm{ref}}x$, con ordenada al origen nula.}
-\label{fig:ajustes}
+\caption{Ajustes lineales independientes para los cuatro diámetros de órbita. Las rectas discontinuas representan la relación teórica $y={(e/m)}_{\mathrm{ref}}x$, con ordenada al origen nula.}\label{fig:ajustes}
 \end{figure}
 
 \begin{table}[H]
 \centering\small
-\caption{Parámetros de los ajustes de $2U_A/A$ frente a $(ir)^2$ y errores de sus pendientes respecto del valor de referencia.}\label{tab:regresion}
-\begin{tabular}{r r r r r}
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+\caption{Parámetros de los ajustes de $2U_A/A$ frente a ${(ir)}^2$ y errores de sus pendientes respecto del valor de referencia.}\label{tab:regresion}
+\begin{tabular}{|c|c|c|c|c|} %chktex 44
 \toprule
 $d$ (m) & Pendiente $m$ ($10^{11}$ C/kg) & Ordenada $b$ ($10^8$, S.I.) & $R^2$ & Error relativo\\
 \midrule
@@ -423,7 +428,7 @@ El promedio de las cuatro pendientes es $\overline{m}=1{,}2971\times10^{11}\ \ma
 Ambos tratamientos utilizan las mismas cuarenta mediciones. No obstante, producen estimaciones diferentes, como se resume en la Tabla~\ref{tab:comparacion}.
 \begin{table}[H]
 \centering\small
-\caption{Comparación con el valor de referencia $(e/m)_{\mathrm{ref}}=1{,}7588\times10^{11}\ \mathrm{C/kg}$.}\label{tab:comparacion}
+\caption{Comparación con el valor de referencia ${(e/m)}_{\mathrm{ref}}=1{,}7588\times10^{11}\ \mathrm{C/kg}$.}\label{tab:comparacion}
 \begin{tabular}{l r r}
 \toprule
 Procedimiento & $e/m$ obtenido ($10^{11}$ C/kg) & Error relativo\\
