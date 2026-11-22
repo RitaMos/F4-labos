@@ -273,24 +273,32 @@ lo que equivale a unos $13\nm$ para $\lambda\approx585\nm$. El ancho de la emisi
 %=====================================================================
 \section{Instrumentos y elementos empleados}
 
-\begin{longtable}{@{}L{4.2cm}L{6.6cm}L{5.4cm}@{}}
-    \caption{Instrumentos y elementos del montaje experimental.}\label{tab:instrumentos}\\
-    \toprule
-    \textbf{Elemento} & \textbf{Función} & \textbf{Especificación relevante} \\
-    \midrule
-    \endfirsthead
-    \toprule
-    \textbf{Elemento} & \textbf{Función} & \textbf{Especificación relevante} \\
-    \midrule
-    \endhead
-    \bottomrule
-    \endfoot
-    Fuente de alta tensión & Produce la descarga eléctrica que excita el gas del tubo. & Tensión del orden de los kV \\
-    Tubos de Plücker & Contienen el gas a baja presión entre dos electrodos. & He, Kr, Hg e incógnitas N.º 1, 2 y 3 \\
-    Fibra óptica & Conduce la radiación desde el tubo hasta la rendija del espectrómetro. & Posición ajustable para evitar la saturación \\
-    Espectrómetro de red de difracción & Dispersa la radiación y mide su intensidad en función de $\lambda$. & Rango de $350$ a $1000\nm$; resolución $\approx2\nm$ \\
-    PC con software de adquisición & Visualiza el espectro y permite leer $\lambda$ y el ancho de banda con un cursor. & Intensidad en cuentas (máx. $\approx4000$) \\
-\end{longtable}
+%\begin{longtable}{@{}L{4.2cm}L{6.6cm}L{5.4cm}@{}}
+  %  \caption{Instrumentos y elementos del montaje experimental.}\label{tab:instrumentos}\\
+  %  \toprule
+  %  \textbf{Elemento} & \textbf{Función} & \textbf{Especificación relevante} \\
+  %  \midrule
+  %  \endfirsthead
+  %  \toprule
+  %  \textbf{Elemento} & \textbf{Función} & \textbf{Especificación relevante} \\
+  %  \midrule
+  %  \endhead
+  %  \bottomrule
+  %  \endfoot
+   % Fuente de alta tensión & Produce el campo eléctrico que excita el gas del tubo. & Tensión del orden de los kV \\
+   % Tubos de Plücker & Contienen el gas a baja presión entre dos electrodos. & He, Kr, Hg e incógnitas N.º 1, 2 y 3 \\
+  %  Fibra óptica & Conduce la radiación desde el tubo hasta la rendija del espectrómetro. & Posición ajustable para evitar la saturación \\
+  %  Espectrómetro de red de difracción & Dispersa la radiación y mide su intensidad en función de $\lambda$. & Rango de $350$ a $1000\nm$; resolución $\approx2\nm$ \\
+ %   PC con software de adquisición & Visualiza el espectro y permite leer $\lambda$ y el ancho de banda con un cursor. & Intensidad en cuentas (máx. $\approx4000$) \\
+%\end{longtable} 
+
+\begin{itemize}
+    \item Fuente de tensión
+    \item Tubos de Plücker
+    \item Fibra óptica
+    \item Espectrómetro de red de difracción
+    \item PC con software de adquisición
+\end{itemize}
 
 \begin{figure}[H]
 \centering
@@ -324,10 +332,9 @@ lo que equivale a unos $13\nm$ para $\lambda\approx585\nm$. El ancho de la emisi
 Se siguió el procedimiento indicado en la guía de la cátedra \cite{consigna}:
 
 \begin{enumerate}
-    \item Se colocó el tubo de Plücker en el soporte de la fuente de alta tensión y se encendió la descarga, evitando tocar los contactos mientras el tubo estaba energizado.
+    \item Se conectó el tubo de Plücker a la fuente de alta tensión y se encendió la descarga, evitando tocar los contactos mientras el tubo estaba energizado.
     \item Se posicionó el extremo de la fibra óptica frente al tubo y se ajustó su distancia y orientación para obtener el mayor flujo de radiación sin saturar el detector.
-    \item En el software del espectrómetro se ajustaron el tiempo de integración y el promediado hasta observar con claridad el espectro de emisión.
-    \item Con el cursor del programa se midió la longitud de onda $\lambda$ del máximo de cada línea y su ancho de banda $\Delta\lambda$, y se registró el color observado.
+    \item Se anotó la medición del programa de la longitud de onda $\lambda$ del máximo de cada línea y su ancho de banda $\Delta\lambda$, para cada color observado.
     \item Se repitió el procedimiento con los tubos de He, Kr y Hg y luego con los tres tubos incógnita, cuyos espectros completos se guardaron como capturas de pantalla (Anexo~\ref{anexo}).
 \end{enumerate}
 
@@ -391,14 +398,6 @@ Al comparar con espectros de referencia de uso habitual, que suelen mostrar solo
 
 En la Tabla~\ref{tab:conocidos} estas dos líneas se compararon, en consecuencia, con sus valores de Ar~I. Cabe señalar que el argón posee otras líneas intensas en la misma región ($750,4$, $772,4$, $794,8$, $801,5$ y $842,5\nm$) que no se registraron en la planilla, por lo que convendría verificar su presencia en una próxima medición.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.92\textwidth]{residuos_conocidos.pdf}
-\caption{Diferencia entre la longitud de onda medida y la del NIST para las líneas de la Tabla~\ref{tab:conocidos}. La franja gris indica la incertidumbre típica $\pm\Delta\lambda=\pm2\nm$.}
-\label{fig:residuos}
-\end{figure}
-
-La Figura~\ref{fig:residuos} muestra que los residuos, además de ser pequeños, presentan una leve tendencia sistemática: son negativos en el extremo azul-verde (alrededor de $-0,5\nm$) y positivos en el rojo profundo e infrarrojo cercano (entre $+0,5$ y $+0,9\nm$). Un ajuste lineal de los residuos da una pendiente de unos $0,3\nm$ cada $100\nm$, lo que sugiere un pequeño error en la calibración en longitud de onda del espectrómetro. Este efecto es menor que la resolución del instrumento y no afecta la identificación de ninguna línea.
 
 \subsection{Tubos incógnita}
 
