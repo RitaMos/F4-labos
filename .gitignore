@@ -7,3 +7,6 @@
 *.pdf_latexmk
 *.log
 *.fdb_latexmk
+/TP3/tp3.pdf
+/TP4/tp4.pdf
+__pycache__/
